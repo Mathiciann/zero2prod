@@ -19,3 +19,16 @@ actix-web = "4.3.1"
 reqwest = "0.11.18"
 serde = { version = "1.0.171", features = ["derive"] }
 tokio = { version = "1.29.1" , features = ["macros", "rt-multi-thread"] }
+# Using table-like toml syntax to avoid a super-long line!
+[dependencies.sqlx]
+version = "0.5.7"
+default-features = false
+features = [
+    "runtime-actix-rustls",
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate"
+]
+
